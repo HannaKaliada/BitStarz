@@ -13,7 +13,8 @@ body {
 p,
 h1,
 h2,
-h3 {
+h3,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -60,6 +61,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+  position: relative;
 }
 
 .header__top {
@@ -90,6 +92,7 @@ a {
   height: 50%;
   width: 100%;
   bottom: 0;
+  z-index: 0;
 }
 
 .header .claim-now {
@@ -99,6 +102,7 @@ a {
   bottom: 50px;
   left: 50%;
   margin-left: -175px;
+  z-index: 1;
 }
 
 .header .claim-now a {
@@ -130,6 +134,7 @@ a {
           align-items: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1020;
 }
 
 .form__background form {
@@ -236,7 +241,7 @@ a {
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 36px;
-  line-height: 22px;
+  line-height: 1;
 }
 
 .info p {
@@ -251,7 +256,7 @@ a {
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 36px;
-  line-height: 22px;
+  line-height: 1;
   letter-spacing: 0.07px;
 }
 
@@ -362,6 +367,177 @@ a {
 @media (max-width: 1440px) {
   .wrapper {
     width: 100%;
+  }
+  .header .claim-now {
+    width: 300px;
+    margin-left: -150px;
+  }
+  .header .claim-now a {
+    padding: 10px 85px;
+  }
+  .coin-1 {
+    left: 60px;
+  }
+  .coin-2 {
+    width: 110px;
+    right: 20px;
+  }
+  .coin-3 {
+    top: 620px;
+    width: 80px;
+    right: 20px;
+  }
+  .coin-4 {
+    display: none;
+  }
+  .coin-5 {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 426px) {
+  .header {
+    background-image: url("assets/images/tablet.jpg");
+  }
+  .header__top {
+    padding: 30px;
+  }
+  .header .logo__img {
+    width: 38vw;
+    max-width: 226px;
+  }
+  .header .open-form-button {
+    width: 45vw;
+    max-width: 250px;
+    font-size: 16px;
+  }
+  .header .form__background form {
+    width: 70%;
+    padding: 0 20px;
+  }
+  .header .form__background form h3 {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+  .header .form__background form input {
+    height: 40px;
+  }
+  .header .form__background form textarea {
+    margin-bottom: 22px;
+    height: 110px;
+  }
+  .header .form__background form .submit-button {
+    margin-bottom: 30px;
+  }
+  .info {
+    padding: 100px 20px 200px;
+  }
+  .info h1 {
+    font-size: 32px;
+  }
+  .info h2 {
+    font-size: 30px;
+  }
+  .info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  .info__list li {
+    font-size: 18px;
+  }
+  .info .deposits .line .deposit {
+    width: 50%;
+  }
+  .info .deposits .line .deposit h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    background-image: url("assets/images/mobile.png");
+    background-position: top;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    background-image: url("assets/images/mobile.png");
+  }
+  .header__top {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 40px 30px;
+  }
+  .header__top a {
+    display: none;
+  }
+  .header .claim-now {
+    bottom: 20px;
+  }
+  .header .form__background form {
+    width: 90%;
+    padding: 0 20px;
+  }
+  .header .form__background form h3 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .header .form__background form input {
+    height: 40px;
+  }
+  .header .form__background form textarea {
+    margin-bottom: 22px;
+    height: 110px;
+  }
+  .header .form__background form .submit-button {
+    margin-bottom: 30px;
+  }
+  .info {
+    padding: 100px 20px 150px;
+  }
+  .info h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .info h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .info__list li {
+    font-size: 16px;
+  }
+  .info .deposits .line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info .deposits .line .deposit {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .info .deposits .line .deposit h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .info .deposits .line .deposit:first-child {
+    margin-right: 0;
+  }
+  .coin-1 {
+    display: none;
+  }
+  .coin-2 {
+    top: 0;
+    left: 20px;
+    z-index: -1;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,8 @@ body {
 p,
 h1,
 h2,
-h3 {
+h3,
+ul {
     margin: 0;
     padding: 0;
 }
@@ -71,6 +72,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    position: relative;
     &__top {
         display: flex;
         align-items: center;
@@ -89,7 +91,8 @@ a {
         position: absolute;
         height: 50%;
         width: 100%;
-        bottom:0;
+        bottom: 0;
+        z-index: 0;
     }
     .claim-now {
         width: 350px;
@@ -98,6 +101,7 @@ a {
         bottom: 50px;
         left: 50%;
         margin-left: -175px;
+        z-index: 1;
         a {
             text-decoration: none;
             color: #ab4800;
@@ -120,6 +124,7 @@ a {
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+    z-index: 1020;
     form {
         display: flex;
         flex-direction: column;
@@ -203,7 +208,7 @@ a {
         margin-bottom: 40px;
         font-weight: 600;
         font-size: 36px;
-        line-height: 22px;
+        line-height: 1;
     }
     p {
         margin-bottom: 40px;
@@ -216,7 +221,7 @@ a {
         margin-bottom: 40px;
         font-weight: 600;
         font-size: 36px;
-        line-height: 22px;
+        line-height: 1;
         letter-spacing: 0.07px;
     }
     &__list {
@@ -303,5 +308,187 @@ a {
 @include tablet-and-mobile() {
     .wrapper {
         width: 100%;
+    }
+    .header {
+        .claim-now {
+            width: 300px;
+            margin-left: -150px;
+            a {
+                padding: 10px 85px;
+            }
+        }
+    }
+    .coin-1 {
+        left: 60px;
+    }
+    .coin-2 {
+        width: 110px;
+        right: 20px;
+    }
+    .coin-3 {
+        top: 620px;
+        width: 80px;
+        right: 20px;
+    }
+    .coin-4 {
+        display: none;
+    }
+    .coin-5 {
+        width: 50vw;
+    }
+}
+
+@include tablet() {
+    .header {
+        background-image: url('assets/images/tablet.jpg');
+        &__top {
+            padding: 30px;
+        }
+        .logo__img {
+            width: 38vw;
+            max-width: 226px;
+        }
+        .open-form-button {
+            width: 45vw;
+            max-width: 250px;
+            font-size: 16px;
+        }
+        .form__background {
+            form {
+                width: 70%;
+                padding: 0 20px;
+                h3 {
+                    font-size: 30px;
+                    margin: 20px 0;
+                }
+                input {
+                    height: 40px;
+                }
+                textarea {
+                    margin-bottom: 22px;
+                    height: 110px;
+                }
+                .submit-button {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .info {
+        padding: 100px 20px 200px;
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+        &__list {
+            li {
+                font-size: 18px;
+            }
+        }
+        .deposits {
+            .line {
+                .deposit {
+                    width: 50%;
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:640px){
+    .header{
+        background-image: url("assets/images/mobile.png");
+        background-position: top;
+    }
+}
+
+@include mobile() {
+    .header {
+        background-image: url("assets/images/mobile.png");
+        &__top {
+            justify-content: center;
+            padding: 40px 30px;
+            a {
+                display: none;
+            }
+        }
+        .claim-now {
+            bottom: 20px;
+        }
+        .form__background {
+            form {
+                width: 90%;
+                padding: 0 20px;
+                h3 {
+                    font-size: 25px;
+                    margin: 20px 0;
+                }
+                input {
+                    height: 40px;
+                }
+                textarea {
+                    margin-bottom: 22px;
+                    height: 110px;
+                }
+                .submit-button {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .info {
+        padding: 100px 20px 150px;
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        &__list {
+            li {
+                font-size: 16px;
+            }
+        }
+        .deposits {
+            .line {
+                flex-direction: column;
+                .deposit {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                    }
+                }
+                .deposit:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .coin-1 {
+        display: none;
+    }
+    .coin-2 {
+        top: 0;
+        left: 20px;
+        z-index: -1;
     }
 }
