@@ -84,7 +84,7 @@ h3 {
         top: 50%;
         transform: translate(0, -55%);
     }
-    .claim-now{
+    .claim-now {
         position: absolute;
         bottom: 100px;
         left: 50%;
@@ -236,7 +236,8 @@ h3 {
             }
         }
     }
-    .play-now, .claim-now{
+    .play-now,
+    .claim-now {
         margin-top: 60px;
         a {
             text-decoration: none;
@@ -256,10 +257,12 @@ h3 {
 .coin-1 {
     top: -40px;
     left: 80px;
+    z-index: 1;
 }
 .coin-2 {
     top: -60px;
     right: 80px;
+    z-index: 1;
 }
 .coin-3 {
     top: 500px;

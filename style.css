@@ -283,11 +283,13 @@ h3 {
   margin-right: 50px;
 }
 
-.info .play-now, .info .claim-now {
+.info .play-now,
+.info .claim-now {
   margin-top: 60px;
 }
 
-.info .play-now a, .info .claim-now a {
+.info .play-now a,
+.info .claim-now a {
   text-decoration: none;
   color: #ab4800;
   padding: 10px 65px;
@@ -305,11 +307,13 @@ h3 {
 .coin-1 {
   top: -40px;
   left: 80px;
+  z-index: 1;
 }
 
 .coin-2 {
   top: -60px;
   right: 80px;
+  z-index: 1;
 }
 
 .coin-3 {
