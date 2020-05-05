@@ -35,6 +35,11 @@ h3 {
     padding: 0;
 }
 
+button,
+a {
+    outline: none;
+}
+
 .wrapper {
     width: 1440px;
     margin: 0 auto;
@@ -73,31 +78,35 @@ h3 {
         position: relative;
         padding: 40px 80px;
     }
-    &__logo {
-        img {
-            height: 200px;
-        }
-    }
     .flash {
         position: absolute;
         right: 40px;
         top: 50%;
         transform: translate(0, -55%);
     }
-    .claim-now {
+    .dark-background {
+        background: linear-gradient(359.87deg, #120522 1.28%, rgba(18, 5, 34, 0) 103.72%);
         position: absolute;
-        bottom: 100px;
+        height: 50%;
+        width: 100%;
+        bottom:0;
+    }
+    .claim-now {
+        width: 350px;
+        height: 60px;
+        position: absolute;
+        bottom: 50px;
         left: 50%;
-        margin-left: -150px;
+        margin-left: -175px;
         a {
             text-decoration: none;
             color: #ab4800;
-            padding: 10px 60px;
+            padding: 10px 110px;
         }
     }
     .claim-now:hover {
-    transform: scale(1.2);
-}
+        transform: scale(1.2);
+    }
 }
 
 .form__background {
@@ -137,6 +146,18 @@ h3 {
             color: #50005b;
             cursor: pointer;
         }
+        .cross {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            font-size: 32px;
+            bottom: -0.08%;
+            color: #50005b;
+            cursor: pointer;
+        }
+        .cross:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
         .first-line {
             display: flex;
             margin-bottom: 25px;
@@ -158,7 +179,6 @@ h3 {
             border: 4px solid rgba(47, 0, 54, 0.6);
             box-sizing: border-box;
             border-radius: 10px;
-            color: #ffffff;
             color: rgba(255, 255, 255, 0.5);
             font-size: 18px;
             padding: 0 14px;
