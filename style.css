@@ -25,27 +25,27 @@ a {
 }
 
 .wrapper {
-  width: 1440px;
-  margin: 0 auto;
   position: relative;
+  width: 1440px;
   height: 100%;
+  margin: 0 auto;
 }
 
 .gold-button {
-  height: 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 250px;
+  height: 48px;
+  font-weight: 700;
   font-size: 18px;
+  color: #ab4800;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-12.5%, #ffea9f), color-stop(112.5%, rgba(255, 181, 4, 0))), #ffb504;
   background: linear-gradient(180deg, #ffea9f -12.5%, rgba(255, 181, 4, 0) 112.5%), #ffb504;
   border: 4px solid #ffc804;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0px 10px 40px rgba(255, 238, 149, 0.8), inset 0px 0px 24px rgba(252, 212, 65, 0.5);
-          box-shadow: 0px 10px 40px rgba(255, 238, 149, 0.8), inset 0px 0px 24px rgba(252, 212, 65, 0.5);
   border-radius: 60px;
-  color: #ab4800;
+  -webkit-box-shadow: 0 10px 40px rgba(255, 238, 149, 0.8), inset 0 0 24px rgba(252, 212, 65, 0.5);
+          box-shadow: 0 10px 40px rgba(255, 238, 149, 0.8), inset 0 0 24px rgba(252, 212, 65, 0.5);
   cursor: pointer;
-  font-weight: 700;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -56,59 +56,51 @@ a {
 }
 
 .header {
-  background: url("assets/images/desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  background-image: url("assets/images/desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .header__top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 40px 80px;
 }
 
-.header .flash {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  -webkit-transform: translate(0, -55%);
-          transform: translate(0, -55%);
-}
-
 .header .dark-background {
-  background: linear-gradient(359.87deg, #120522 1.28%, rgba(18, 5, 34, 0) 103.72%);
   position: absolute;
-  height: 50%;
-  width: 100%;
   bottom: 0;
   z-index: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(359.87deg, #120522 1.28%, rgba(18, 5, 34, 0) 103.72%);
 }
 
 .header .claim-now {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1;
   width: 350px;
   height: 60px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
   margin-left: -175px;
-  z-index: 1;
 }
 
 .header .claim-now a {
-  text-decoration: none;
-  color: #ab4800;
   padding: 10px 110px;
+  color: #ab4800;
+  text-decoration: none;
 }
 
 .header .claim-now:hover {
@@ -118,11 +110,9 @@ a {
 
 .form__background {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
   top: 0;
   left: 0;
+  z-index: 1020;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,12 +122,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 1020;
 }
 
 .form__background form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,38 +140,37 @@ a {
           flex-direction: column;
   width: 50%;
   max-width: 940px;
-  background: #240129;
-  -webkit-box-shadow: 0px 0px 200px rgba(255, 122, 0, 0.6);
-          box-shadow: 0px 0px 200px rgba(255, 122, 0, 0.6);
-  border-radius: 40px;
   padding: 0 48px;
-  position: relative;
+  background: #240129;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 122, 0, 0.6);
+          box-shadow: 0 0 200px rgba(255, 122, 0, 0.6);
 }
 
 .form__background form h3 {
-  color: #ffffff;
-  text-align: center;
+  margin: 30px 0;
   font-weight: 600;
   font-size: 36px;
-  margin: 30px 0;
+  text-align: center;
+  color: #ffffff;
 }
 
 .form__background form .cross {
   position: absolute;
-  right: 30px;
   top: 10px;
-  font-size: 32px;
+  right: 30px;
   bottom: -0.08%;
+  font-size: 32px;
   color: #50005b;
   cursor: pointer;
 }
 
 .form__background form .cross {
   position: absolute;
-  right: 30px;
   top: 10px;
-  font-size: 32px;
+  right: 30px;
   bottom: -0.08%;
+  font-size: 32px;
   color: #50005b;
   cursor: pointer;
 }
@@ -204,20 +196,20 @@ a {
 }
 
 .form__background form textarea {
-  margin-bottom: 32px;
   height: 140px;
+  margin-bottom: 32px;
 }
 
 .form__background form input,
 .form__background form textarea {
-  background: rgba(56, 0, 64, 0.6);
-  border: 4px solid rgba(47, 0, 54, 0.6);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 18px;
   padding: 0 14px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(56, 0, 64, 0.6);
+  border: 4px solid rgba(47, 0, 54, 0.6);
+  border-radius: 10px;
   outline: none;
 }
 
@@ -299,11 +291,11 @@ a {
 }
 
 .info .deposits .line .deposit h3 {
-  text-align: center;
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 24px;
   line-height: 22px;
-  margin-bottom: 24px;
+  text-align: center;
 }
 
 .info .deposits .line .deposit img {
@@ -323,9 +315,9 @@ a {
 
 .info .play-now a,
 .info .claim-now a {
-  text-decoration: none;
-  color: #ab4800;
   padding: 10px 65px;
+  color: #ab4800;
+  text-decoration: none;
 }
 
 .hidden {
@@ -360,8 +352,8 @@ a {
 }
 
 .coin-5 {
-  bottom: 0;
   right: 0;
+  bottom: 0;
 }
 
 @media (max-width: 1440px) {
@@ -379,13 +371,13 @@ a {
     left: 60px;
   }
   .coin-2 {
-    width: 110px;
     right: 20px;
+    width: 110px;
   }
   .coin-3 {
     top: 620px;
-    width: 80px;
     right: 20px;
+    width: 80px;
   }
   .coin-4 {
     display: none;
@@ -416,15 +408,15 @@ a {
     padding: 0 20px;
   }
   .header .form__background form h3 {
-    font-size: 30px;
     margin: 20px 0;
+    font-size: 30px;
   }
   .header .form__background form input {
     height: 40px;
   }
   .header .form__background form textarea {
-    margin-bottom: 22px;
     height: 110px;
+    margin-bottom: 22px;
   }
   .header .form__background form .submit-button {
     margin-bottom: 30px;
@@ -439,8 +431,8 @@ a {
     font-size: 30px;
   }
   .info p {
-    font-size: 20px;
     margin-bottom: 20px;
+    font-size: 20px;
     line-height: 30px;
   }
   .info__list li {
@@ -462,9 +454,6 @@ a {
 }
 
 @media (max-width: 425px) {
-  .header {
-    background-image: url("assets/images/mobile.png");
-  }
   .header__top {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -482,15 +471,15 @@ a {
     padding: 0 20px;
   }
   .header .form__background form h3 {
-    font-size: 25px;
     margin: 20px 0;
+    font-size: 25px;
   }
   .header .form__background form input {
     height: 40px;
   }
   .header .form__background form textarea {
-    margin-bottom: 22px;
     height: 110px;
+    margin-bottom: 22px;
   }
   .header .form__background form .submit-button {
     margin-bottom: 30px;
@@ -499,17 +488,17 @@ a {
     padding: 100px 20px 150px;
   }
   .info h1 {
-    font-size: 24px;
     margin-bottom: 20px;
+    font-size: 24px;
   }
   .info p {
-    font-size: 18px;
     margin-bottom: 15px;
+    font-size: 18px;
   }
   .info h2 {
-    font-size: 22px;
     margin-top: 40px;
     margin-bottom: 20px;
+    font-size: 22px;
   }
   .info__list li {
     font-size: 16px;
@@ -525,8 +514,8 @@ a {
     margin-bottom: 30px;
   }
   .info .deposits .line .deposit h3 {
-    font-size: 20px;
     margin-bottom: 15px;
+    font-size: 20px;
   }
   .info .deposits .line .deposit:first-child {
     margin-right: 0;
