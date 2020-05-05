@@ -436,6 +436,18 @@ a {
   }
 }
 
+@media(min-width:1020px){
+.info {
+    .deposits {
+      .line {
+        .deposit {
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+
 @media(max-width:640px) {
   .header {
     background-image: url("assets/images/mobile.png");
