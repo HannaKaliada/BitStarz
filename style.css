@@ -94,7 +94,12 @@ h3 {
 .header .claim-now a {
   text-decoration: none;
   color: #ab4800;
-  padding: 10px 65px;
+  padding: 10px 60px;
+}
+
+.header .claim-now:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .form__background {
